@@ -247,6 +247,13 @@ require('lazy').setup({
   'neoclide/coc.nvim',
   'preservim/nerdtree',
   {
+    'L3MON4D3/LuaSnip',
+    -- follow latest release.
+    version = 'v2.3', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = 'make install_jsregexp',
+  },
+  {
     'nvim-tree/nvim-tree.lua',
     keys = {
       { 'n', '<leader>nt', ':NvimTreeToggle<CR>', { silent = true } },
