@@ -247,6 +247,29 @@ require('lazy').setup({
   'neoclide/coc.nvim',
   'preservim/nerdtree',
   {
+    'm4xshen/autoclose.nvim',
+    config = function()
+      require('autoclose').setup {
+        keys = {
+          ['<'] = { escape = true, close = true, pair = '<>', disabled_filetypes = {} },
+          ['('] = { escape = true, close = true, pair = '()' },
+          ['['] = { escape = true, close = true, pair = '[]' },
+          ['{'] = { escape = true, close = true, pair = '{}' },
+
+          ['>'] = { escape = true, close = false, pair = '<>' },
+          [')'] = { escape = true, close = false, pair = '()' },
+          [']'] = { escape = true, close = false, pair = '[]' },
+          ['}'] = { escape = true, close = false, pair = '{}' },
+
+          ['"'] = { escape = true, close = true, pair = '""' },
+          ["'"] = { escape = true, close = true, pair = "''" },
+          ['`'] = { escape = true, close = true, pair = '``' },
+        },
+      }
+    end,
+  },
+  { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  {
     'L3MON4D3/LuaSnip',
     -- follow latest release.
     version = 'v2.3', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
