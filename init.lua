@@ -277,6 +277,12 @@ require('lazy').setup({
     build = 'make install_jsregexp',
   },
   {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+  },
+  {
     'nvim-tree/nvim-tree.lua',
     keys = {
       { 'n', '<leader>nt', ':NvimTreeToggle<CR>', { silent = true } },
