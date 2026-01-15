@@ -152,6 +152,12 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- set tab size to 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true -- Use spaces instead of tabs for indentation
+
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
